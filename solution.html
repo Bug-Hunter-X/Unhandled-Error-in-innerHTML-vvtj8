@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Solution: Check if the variable is defined before using it.
+    const myVariable = undefined;
+
+    if (typeof myVariable !== 'undefined') {
+      document.getElementById("myDiv").innerHTML = myVariable;
+    } else {
+      console.log('Variable is undefined.  Using default value.');
+       document.getElementById("myDiv").innerHTML = "Variable not defined."; 
+    }
+  </script>
+</body>
+</html>
